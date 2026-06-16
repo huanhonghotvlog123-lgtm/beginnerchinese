@@ -71,5 +71,26 @@ footer{
     padding:25px;
     margin-top:50px;
 }
-```
+```css id="4afz0d"
+.card,
+.dialog,
+.stat{
+    transition:0.3s;
+}
+
+.card:hover,
+.dialog:hover,
+.stat:hover{
+    transform:translateY(-5px);
+}
+
+nav a:hover{
+    color:#22c55e;
+}
+
+body{
+    scroll-behavior:smooth;
+}
+
+
 
