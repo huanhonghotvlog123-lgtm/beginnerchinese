@@ -1,69 +1,293 @@
+```html
 <!DOCTYPE html>
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Học Tiếng Trung Cho Người Mới Bắt Đầu</title>
+
+<title>Easy Chinese - Học Tiếng Trung Miễn Phí</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;700&family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
-body{
-    font-family: Arial, sans-serif;
-    background:#f5f5f5;
+
+*{
     margin:0;
     padding:0;
+    box-sizing:border-box;
 }
+
+body{
+    font-family:'Noto Sans','Noto Sans SC',sans-serif;
+    background:#f0fdf4;
+    color:#333;
+}
+
+/* Header */
 
 header{
-    background:#d32f2f;
+    background:linear-gradient(135deg,#22c55e,#16a34a);
     color:white;
     text-align:center;
-    padding:20px;
+    padding:80px 20px;
 }
 
+header h1{
+    font-size:52px;
+    margin-bottom:15px;
+}
+
+header p{
+    font-size:20px;
+    opacity:.95;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:14px 30px;
+    background:white;
+    color:#16a34a;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:scale(1.05);
+}
+
+/* Menu */
+
+nav{
+    background:white;
+    padding:18px;
+    text-align:center;
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+    position:sticky;
+    top:0;
+    z-index:999;
+}
+
+nav a{
+    text-decoration:none;
+    color:#16a34a;
+    margin:0 15px;
+    font-weight:600;
+}
+
+/* Container */
+
 .container{
-    max-width:900px;
+    max-width:1200px;
     margin:auto;
-    padding:20px;
+    padding:50px 20px;
+}
+
+.section-title{
+    text-align:center;
+    color:#16a34a;
+    margin-bottom:30px;
+    font-size:32px;
+}
+
+/* Cards */
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
 }
 
 .card{
     background:white;
-    padding:20px;
-    margin-bottom:20px;
-    border-radius:10px;
-    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+    border-radius:18px;
+    padding:25px;
+    border-left:6px solid #22c55e;
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+    transition:.3s;
 }
 
-h2{
-    color:#d32f2f;
+.card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 25px rgba(34,197,94,.20);
 }
+
+.card h3{
+    color:#16a34a;
+    margin-bottom:15px;
+}
+
+.lesson{
+    margin:12px 0;
+    font-size:18px;
+}
+
+/* Stats */
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+    margin-top:40px;
+}
+
+.stat-box{
+    background:white;
+    text-align:center;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+}
+
+.stat-box h2{
+    color:#16a34a;
+}
+
+/* Footer */
+
+footer{
+    background:#14532d;
+    color:white;
+    text-align:center;
+    padding:30px;
+    margin-top:50px;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+header h1{
+    font-size:34px;
+}
+
+header p{
+    font-size:16px;
+}
+
+nav a{
+    display:block;
+    margin:10px 0;
+}
+
+}
+
 </style>
-
 </head>
+
 <body>
 
 <header>
-    <h1>🇨🇳 Học Tiếng Trung Cho Người Mới Bắt Đầu</h1>
-    <p>Học miễn phí từ cơ bản đến nâng cao</p>
+
+    <h1>🇨🇳 Easy Chinese</h1>
+
+    <p>Học tiếng Trung miễn phí cho người mới bắt đầu</p>
+
+    <a href="#baihoc" class="btn">
+        Bắt đầu học
+    </a>
+
 </header>
+
+<nav>
+    <a href="#">Trang chủ</a>
+    <a href="#">Pinyin</a>
+    <a href="#">Từ vựng</a>
+    <a href="#">Ngữ pháp</a>
+    <a href="#">Hội thoại</a>
+</nav>
 
 <div class="container">
 
-<div class="card">
-    <h2>Bài 1: Chào hỏi</h2>
-    <p><b>你好</b> (nǐ hǎo) - Xin chào</p>
-    <p><b>谢谢</b> (xiè xie) - Cảm ơn</p>
-    <p><b>再见</b> (zài jiàn) - Tạm biệt</p>
+    <h2 class="section-title" id="baihoc">
+        Bài học nổi bật
+    </h2>
+
+    <div class="grid">
+
+        <div class="card">
+
+            <h3>👋 Bài 1: Chào hỏi</h3>
+
+            <div class="lesson">
+                你好 (nǐ hǎo) - Xin chào
+            </div>
+
+            <div class="lesson">
+                谢谢 (xiè xie) - Cảm ơn
+            </div>
+
+            <div class="lesson">
+                再见 (zài jiàn) - Tạm biệt
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <h3>📚 Từ vựng cơ bản</h3>
+
+            <div class="lesson">
+                我 (wǒ) - Tôi
+            </div>
+
+            <div class="lesson">
+                你 (nǐ) - Bạn
+            </div>
+
+            <div class="lesson">
+                老师 (lǎoshī) - Giáo viên
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <h3>🙋 Giới thiệu bản thân</h3>
+
+            <div class="lesson">
+                我叫小明 (wǒ jiào xiǎomíng)
+            </div>
+
+            <div class="lesson">
+                Tôi tên là Tiểu Minh
+            </div>
+
+            <div class="lesson">
+                我是学生 (wǒ shì xuéshēng)
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="stats">
+
+        <div class="stat-box">
+            <h2>100+</h2>
+            <p>Từ vựng</p>
+        </div>
+
+        <div class="stat-box">
+            <h2>20+</h2>
+            <p>Bài học</p>
+        </div>
+
+        <div class="stat-box">
+            <h2>100%</h2>
+            <p>Miễn phí</p>
+        </div>
+
+    </div>
+
 </div>
 
-<div class="card">
-    <h2>Từ vựng cơ bản</h2>
-    <p>我 (wǒ) - Tôi</p>
-    <p>你 (nǐ) - Bạn</p>
-    <p>老师 (lǎoshī) - Giáo viên</p>
-</div>
-
-</div>
+<footer>
+    © 2025 Easy Chinese | Học tiếng Trung miễn phí
+</footer>
 
 </body>
 </html>
+```
